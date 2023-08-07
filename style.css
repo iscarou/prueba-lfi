@@ -1,9 +1,12 @@
+/****MOBILE FIRST******/
 header{
     width: 90px;
     height: 90px;
     padding: 30px 50px;
 }
-
+section{
+    display: flex;
+}
 body{
     font-family: 'Roboto', sans-serif;
     max-width: 1400px;
@@ -50,6 +53,7 @@ body{
     height: 100vh;
     background-size: cover;
     position: center;
+    flex-direction: column;
 }
 
 .formulario{
@@ -162,11 +166,10 @@ body{
 }
 
 #video{
-    display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
-    padding: 550px 50px;
+    padding: 690px 50px;
 }
 
 #tarjetas{
@@ -175,8 +178,11 @@ body{
     align-items: center;
     justify-content: center;
     padding: 0 20px 60px 30px;
+    text-align: center;
+    align-items: center;
     transform:translateX(0%) translateY(-100%);
 }
+
 
 .primer-fila{
     margin: 0;
@@ -186,44 +192,194 @@ body{
 footer {
     margin-top: 0;
 }
-/********RESPONSIVE*************/
-@media(min-width: 600px) {
+/********DESTOK*************/
+
+@media(min-width: 700px) {
+    body{
+        overflow: scroll;
+    }
     header{
         display: none;
     }
 
-    #banner{
+    .contenido-banner h1{
+        visibility: hidden;
+    }
+    .contenido-banner h3{
         display: flex;
-        position: relative;
-        height: 100%;
         justify-content: flex-end;
-    
-    }
-    
-    /* .contenido-banner h1{
+        align-items: end;
         margin: 0;
-        padding: 5px 10px 0 50px;
-        font-weight: bold;
-        font-size: 3em;
+        transform:translateX(-20%) translateY(-500%);
     }
-    
-    #subtext{
-        margin: 0;
-        padding: 5px 10px 0 50px;
-        font-weight:100;
-        font-size: 1.5em;
-    }
-    
+
     #linea{
         padding: 5px 10px 0 50px;
         position: absolute;
-        width: 85%;
+        width: 54%;
+        transform:translateX(70%) translateY(-1790%);
     }
-    
+
+    .contenido-banner:before{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: end;
+        margin: 0;
+        padding: 40px 20px 0 600px;
+        font-weight: bold;
+        font-size: 3em;
+        content: "¿Quieres saber lo que pasa en todas tus Tiendas Comerciales?";
+        visibility: visible;
+    }
+
     .escritorio img{
-        background-size: cover;
-        margin: auto;
-        padding: 30px 0;
+        visibility: hidden;
     }
-     */
+
+    .escritorio{
+        display:flex;
+        position: left;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: end;
+        margin: 0;
+        padding: 30px;
+        background-image: url(img/png/banner-destok.png);
+        width: 600px;
+        height: 400px;
+        background-size: cover;
+        visibility: visible;
+        transform:translateX(80%) translateY(-30%);
+    }
+
+    #medio{
+        display: flex;
+        background-image: url(img/png/banner-izq.png);
+        justify-content: left;
+        width: 300px;
+        height: 780px;
+        background-size: cover;
+        position: center;
+        /* flex-direction: row; */
+        transform:translateX(0%) translateY(-115%);
+    }
+
+    .formulario{
+        justify-content: left;
+        background-size: cover;
+        position: center;
+        transform:translateX(55%) translateY(40%);
+    }
+
+    .soluciones{
+        display: flex;
+        transform:translateX(5%) translateY(120%);
+        width: 830px;
+        height: 170px;
+        padding: 50px 170px;
+        margin: auto;
+        margin-top: 100px;
+        border-radius: 30px;
+        box-shadow: 1px 1px 3px #000;
+        background: rgb(255, 255, 255);
+    }
+
+    .soluciones h2{
+        margin: 0;
+        position: absolute;
+        font-size: 1.4em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: initial;
+        padding: 0px 250px;
+    }
+
+    .fila1{
+        transform:translateX(2px) translateY(10%);
+    }
+
+    .fila2{
+        transform:translateX(15%) translateY(30%);
+    }
+
+    .fila3{
+        transform:translateX(0%) translateY(30%);
+    }
+
+    video{
+        width: 800px;
+    }
+
+    #video{
+        margin: 0;
+        padding: 0;
+        width: 900px;
+        transform:translateX(25%) translateY(-70%);
+    }
+
+    #tarjetas{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        align-items: center;
+        transform:translateX(0%) translateY(-30%);
+    }
+
+    .carta1{
+        width: 250px;
+        height: 180px;
+        background: rgb(255, 255, 255);
+        padding: 20px;
+        margin: auto;
+        margin-top: 100px;
+        border-radius: 30px;
+        color: black;
+        box-shadow: 1px 1px 5px #000;
+        transform:translateX(-105%) translateY(-30%);
+    }
+
+    .carta2{
+        width: 250px;
+        height: 180px;
+        background: rgb(255, 255, 255);
+        padding: 20px;
+        margin: auto;
+        margin-top: 100px;
+        border-radius: 30px;
+        color: black;
+        box-shadow: 1px 1px 5px #000;
+        transform:translateX(110%) translateY(-175%);
+    }
+
+    .carta3{
+        width: 250px;
+        height: 180px;
+        background: rgb(255, 255, 255);
+        padding: 20px;
+        margin: auto;
+        margin-top: 100px;
+        border-radius: 30px;
+        color: black;
+        box-shadow: 1px 1px 5px #000;
+        transform:translateX(-100%) translateY(-30%);
+    }
+
+    .carta4{
+        width: 250px;
+        height: 180px;
+        background: rgb(255, 255, 255);
+        padding: 20px;
+        margin: auto;
+        margin-top: 100px;
+        border-radius: 30px;
+        color: black;
+        box-shadow: 1px 1px 5px #000;
+        transform:translateX(115%) translateY(-175%);
+    }
+
+
 }
